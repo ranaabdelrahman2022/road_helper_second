@@ -371,7 +371,9 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             padding: EdgeInsets.all(padding),
             decoration: BoxDecoration(
-              color: const Color(0xFF1F3551),
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? const Color(0xFF1F3551)  // Dark mode color
+                  : const Color(0xFF86A5D9), // Light mode color
               borderRadius: BorderRadius.circular(isIOS ? 10 : 15),
             ),
             child: Column(

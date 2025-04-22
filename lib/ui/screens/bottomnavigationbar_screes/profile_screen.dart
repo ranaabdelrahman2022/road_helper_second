@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:road_helperr/ui/screens/ai_welcome_screen.dart';
 import 'package:road_helperr/ui/screens/bottomnavigationbar_screes/map_screen.dart';
 import '../../../utils/app_colors.dart';
+import '../about_screen.dart';
 import 'home_screen.dart';
 import 'notification_screen.dart';
 import 'package:image_picker/image_picker.dart';
@@ -220,7 +221,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         _buildListTile(
                           icon: Icons.info_outline,
                           title: "About",
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(AboutScreen.routeName);
+                          },
                         ),
                         const SizedBox(height: 5),
                         _buildListTile(

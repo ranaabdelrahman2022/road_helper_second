@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
+import 'package:road_helperr/ui/screens/about_screen.dart';
 import 'package:road_helperr/ui/screens/ai_chat.dart';
 import 'package:road_helperr/ui/screens/ai_welcome_screen.dart';
 import 'package:road_helperr/ui/screens/bottomnavigationbar_screes/home_screen.dart';
@@ -86,6 +87,7 @@ class _MyAppState extends State<MyApp> {
       ),
       themeMode: ThemeMode.system,
       routes: {
+        AboutScreen.routeName : (context) =>  AboutScreen(),
         SignupScreen.routeName: (context) => const SignupScreen(),
         SignInScreen.routeName: (context) => const SignInScreen(),
         AiWelcomeScreen.routeName: (context) => const AiWelcomeScreen(),
